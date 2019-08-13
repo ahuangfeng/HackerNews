@@ -12,6 +12,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  //First page to be loaded in the nav controller
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
