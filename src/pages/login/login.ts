@@ -24,8 +24,7 @@ export class LoginPage {
       if(allowed){
         console.log("Logged In");
 
-        //Setting the root page as Home Page
-        //this.navCtrl.setRoot();
+        this.navCtrl.setRoot('HomePage');
       } else {
           this.showError("Access Denied");
           console.log("ERROR");
