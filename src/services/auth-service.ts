@@ -24,15 +24,15 @@ export class AuthService{
         if (credentials.username === null || credentials.password === null) {
             return Observable.throw("Please insert credentials");
         } else {
+            console.log("Logged In");
             return Observable.create(observer => {
                 let access = (credentials.username === "user" && credentials.password === "psw");
                 //TODO: Make a request to your backend to make a real check!
                 this.currentUser = new User('Timmy', 'timmy@gmail.com');
                 observer.next(access);
                 observer.complete();
-            })
+            });
             
-            console.log("Logged In");
         }
     }
 
