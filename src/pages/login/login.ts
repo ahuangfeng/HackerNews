@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, LoadingController, Loading } from 'ionic-angular';
+import { NavController, AlertController, LoadingController, Loading, MenuController} from 'ionic-angular';
 import { AuthService } from '../../services/auth-service';
-import { text } from '@angular/core/src/render3/instructions';
 
 @Component({
   selector: 'page-login',
@@ -11,8 +10,8 @@ export class LoginPage {
   loading: Loading;
   registerCredentials = { username:'', password:'' };
 
-  constructor(public navCtrl: NavController, private auth: AuthService, private alertControl: AlertController, private loadingControl: LoadingController) {
-
+  constructor(public navCtrl: NavController, private auth: AuthService, private alertControl: AlertController, private loadingControl: LoadingController, private menu: MenuController) {
+    this.menu.enable(false, 'myMenu');
   }
 
   //Login from the Login Page
