@@ -1,12 +1,12 @@
 <!-- An id is set with #registerForm which disables the buttons until all required input fileds are filled out -->
 <!-- Button of type = submit will trigger our form submit function -->
 <!-- Login panel is is wrapped inside a form tag -->
-<ion-content padding text-center>
+<ion-content class="login-content" padding text-center>
   
   <!-- App Name -->
   <ion-title>Hacker News</ion-title>
   
-  <div class="login box">
+  <div class="login-box">
 
     <!-- Login panel -->
     <form (ngSubmit)="login()" #registerForm="ngForm">
