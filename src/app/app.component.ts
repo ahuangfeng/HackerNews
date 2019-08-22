@@ -1,10 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Tabs } from 'ionic-angular';
+import { Nav, Platform, Tabs, Events, NavController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
-import { HomePage } from '../pages/homepage/homepage';
 import { ListPage } from '../pages/list/list';
 
 import { Tab1Page } from '../pages/tab1/tab1';
@@ -26,15 +25,18 @@ export class MyApp {
   tab2Root = Tab2Page;
   tab3Root = Tab3Page;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public events: Events, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
     
     // used for an example of ngFor and navigation
-    this.pages = [
+    /*this.pages = [
       { title: 'HomePage', component: HomePage },
       { title: 'List', component: ListPage }
-    ];
+    ];*/
 
+    /*events.subscribe('user:logout', () => {
+      this.navCtrl.popToRoot();
+    });*/
   }
 
   initializeApp() {

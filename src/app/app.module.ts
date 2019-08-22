@@ -20,10 +20,7 @@ import { AuthService} from '../services/auth-service';
   declarations: [
     MyApp,
     LoginPage,
-    ListPage,
-    Tab1Page,
-    Tab2Page,
-    Tab3Page
+    ListPage
   ],
   imports: [
     BrowserModule,
@@ -33,10 +30,7 @@ import { AuthService} from '../services/auth-service';
   entryComponents: [
     MyApp,
     LoginPage,
-    ListPage,
-    Tab1Page,
-    Tab2Page,
-    Tab3Page
+    ListPage
   ],
   providers: [
     StatusBar,

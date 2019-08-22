@@ -23,7 +23,8 @@ export class LoginPage {
       if(allowed){
         console.log("Logged In");
 
-        this.navCtrl.setRoot('HomePage');
+        //this.navCtrl.setRoot('HomePage');
+        this.navCtrl.setRoot('SidemenuPage');
       } else {
           this.showError("Access Denied");
           console.log("ERROR");
