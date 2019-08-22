@@ -8,5 +8,5 @@ This project is a resemblance of the famous social news website Hacker News
     - Back-End provided by @ahuangfeng [Alex Huang Feng
 > Technologies implied are Ionic & Angular framework alongisde Typescript | HTML | CSS
 
-## Helpful Website
+## Helpful Websites
 <a href="https://devdactic.com/ionic-side-menu-tabs/">Ionic Sidemenu + Tabs Navigation</a>
