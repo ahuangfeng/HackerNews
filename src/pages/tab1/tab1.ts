@@ -1,12 +1,8 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the Tab1Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NewsPage } from '../news/news';
+import { NewsService } from '../../services/news-service';
 
 @IonicPage()
 @Component({
@@ -14,12 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tab1.html',
 })
 export class Tab1Page {
+  public allNews = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private newsService: NewsService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tab1Page');
+    this.newsService.getNews().subscribe((response) => {this.allNews = response});
   }
 
+  goToNewsPage(news) {
+    this.navCtrl.push(NewsPage, { newsDetails: news})
+  }
 }

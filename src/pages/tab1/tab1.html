@@ -1,9 +1,3 @@
-<!--
-  Generated template for the Tab1Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
   <ion-navbar>
     <ion-buttons left>
@@ -17,4 +11,23 @@
 
 <ion-content padding>
 This is Tab 1 content!
+
+<div class="cards">
+  
+  <ion-card *ngFor="let news of allNews" (click)="goToNewsPage(news)" color="light" button="true">
+      <ion-item>
+          <ion-avatar item-start>
+            <img src="{{news.profile_image}}">
+          </ion-avatar>
+          <h2>{{news.author}}</h2>
+          <p>{{news.posting_date}}</p>
+      </ion-item>
+    <ion-card-header>{{news.name}}</ion-card-header>
+  </ion-card>
+
+
+
+</div>
+
 </ion-content>
+
