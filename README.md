@@ -10,3 +10,6 @@ This project is a resemblance of the famous social news website Hacker News
 
 ## Helpful Websites
 <a href="https://devdactic.com/ionic-side-menu-tabs/">Ionic Sidemenu + Tabs Navigation</a>
+<a href="https://forum.ionicframework.com/t/where-should-i-put-images/41463/6">Where to put images</a>
+<a href="https://demo.mobiscroll.com/angular/alerts-notifications#">> Angular & Ionic Demos</a>
+<a href="https://github.com/CsgeeksYoutube/IONIC-3-tab-App/tree/master/tutorial%2029%20and%2030">Push when card clicked</a>
