@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>newsPage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{newsDetails.name}}
+    </ion-card-header>
+
+    <img [src]="newsDetails.post_image">
+
+    <ion-card-content>
+      <a href="{{newsDetails.url}}">{{newsDetails.name}} Link</a>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>{{newsDetails.points}}</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-start clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>{{newsDetails.comments}}</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <ion-note>
+          {{newsDetails.author}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
