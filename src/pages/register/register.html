@@ -1,0 +1,40 @@
+<ion-content padding>
+  
+  <!-- Register page -->
+  <ion-title>Welcome to our community</ion-title>
+
+  <!-- Register form -->
+  <form (ngSubmit)="register()">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Username</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label fixed>Confirmation Password</ion-label>
+          <ion-input type="password" value=""></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)="birthday"]></ion-datetime>
+      </ion-item>
+
+    </ion-list>
+  </form>
+
+</ion-content>
