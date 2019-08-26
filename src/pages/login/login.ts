@@ -14,6 +14,12 @@ export class LoginPage {
     this.menu.enable(false, 'myMenu');
   }
 
+  //If in the LoginPage, create an account button is clicked pop the RegisterPage
+  public registerUser() {
+    this.navCtrl.push('RegisterPage');
+    //this.navCtrl.setRoot('RegisterPage');
+  }
+
   //Login from the Login Page
   public login(){
     this.showLoading();
