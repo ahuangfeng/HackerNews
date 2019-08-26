@@ -1,3 +1,8 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Register</ion-title>
+  </ion-navbar>
+</ion-header>
 <ion-content padding>
   
   <!-- Register page -->
@@ -23,7 +28,7 @@
 
       <ion-item>
         <ion-label>Gender</ion-label>
-        <ion-select [(ngModel)]="gender">
+        <ion-select [(ngModel)]="gender" name="gender">
           <ion-option value="f">Female</ion-option>
           <ion-option value="m">Male</ion-option>
         </ion-select>
@@ -31,7 +36,7 @@
 
       <ion-item>
         <ion-label>Birthday</ion-label>
-        <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)="birthday"]></ion-datetime>
+        <ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="birthday" name="birthday"></ion-datetime>
       </ion-item>
 
     </ion-list>
