@@ -1,31 +1,69 @@
 <!-- An id is set with #registerForm which disables the buttons until all required input fileds are filled out -->
 <!-- Button of type = submit will trigger our form submit function -->
 <!-- Login panel is is wrapped inside a form tag -->
-<ion-content class="login-content" padding text-center>
-  
-  <!-- App Name -->
+<!--<ion-content class="login-content" padding text-center>
+
+   App Name
   <ion-title>Hacker News</ion-title>
   
   <div class="login-box">
 
-    <!-- Login panel -->
+    Login panel
     <form (ngSubmit)="login()" #registerForm="ngForm">
-      <ion-list>
-        <ion-item>
-          <ion-label floating>Username</ion-label>
-          <ion-input type="text" [(ngModel)]="registerCredentials.username" name="first"></ion-input>
-        </ion-item>
-        
-        <ion-item>
-          <ion-label floating>Password</ion-label>
-          <ion-input type="password" [(ngModel)]="registerCredentials.password" name="first"></ion-input>
-        </ion-item>
-      </ion-list>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item inset>
+              <ion-label floating>Username</ion-label>
+              <ion-input type="text" [(ngModel)]="registerCredentials.username" name="first"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="password" [(ngModel)]="registerCredentials.password" name="first"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
       
-      <!-- Buttons for Login and Register -->
-      <button ion-button block type="submit" [disabled]="!registerForm.form.valid">Log in</button>
-      <button ion-button outline block>Sign Up</button>
+      <ion-row>
+        <ion-col class="signup-col">
+           Buttons for Login and Register
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+          <button ion-button class="register-btn" outline clear block (click)="register()">Create a new account</button>
+        </ion-col>
+      </ion-row>
     </form>
 
+  </div>
+</ion-content>-->
+
+<ion-content class="login-content" padding text-center>
+  
+  <ion-title>Hacker News</ion-title>
+
+  <div class="login-box">
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-item>
+              <ion-input type="text" placeholder="Email" name="username" [(ngModel)]="registerCredentials.username" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+    </form>
+    <button ion-button class="register-btn" block clear (click)="registerUser()">Create New Account</button>
+      
+      
   </div>
 </ion-content>
