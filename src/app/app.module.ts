@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import {HttpClientModule} from '@angular/common/http';
+import { RegisterPageModule } from '../pages/register/register.module';
 
 //Declarations - Compiler
 import { MyApp } from './app.component';
@@ -25,7 +26,8 @@ import { NewsService } from '../services/news-service';
   imports: [
     HttpClientModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    RegisterPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +41,7 @@ import { NewsService } from '../services/news-service';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    NewsService
+    NewsService,
   ]
 })
 export class AppModule {}
