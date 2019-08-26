@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams , AlertController} from 'ionic-angular';
 import { AuthService } from '../../services/auth-service';
 
-
+//Lazy loading with IonicPage() and regsiter.module.ts
 @IonicPage()
 @Component({
   selector: 'page-register',

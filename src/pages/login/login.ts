@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading, MenuController} from 'ionic-angular';
 import { AuthService } from '../../services/auth-service';
+import { RegisterPage } from '../../pages/register/register';
 
 @Component({
   selector: 'page-login',
@@ -17,7 +18,6 @@ export class LoginPage {
   //If in the LoginPage, create an account button is clicked pop the RegisterPage
   public registerUser() {
     this.navCtrl.push('RegisterPage');
-    //this.navCtrl.setRoot('RegisterPage');
   }
 
   //Login from the Login Page
