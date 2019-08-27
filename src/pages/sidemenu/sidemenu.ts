@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
+import { LoginPage } from '../../pages/login/login';
 
 export interface PageInterface {
   title: string;
@@ -36,5 +37,9 @@ export class SidemenuPage {
 
   goToProfile() {
     this.navCtrl.push('ProfilePage');
+  }
+
+  logout() {
+    this.navCtrl.setRoot(LoginPage);
   }
 }

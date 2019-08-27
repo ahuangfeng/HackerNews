@@ -6,14 +6,29 @@
     </ion-header>
   
     <ion-content>
-      <img class="user-avatar round" style="height:70px;max-width:70px;" src="/assets/img/watanabe_mayu.jpg" (click)="goToProfile()">
+        <ion-card text-center class="hide-card">
+            <img menuClose src="/assets/img/watanabe_mayu.jpg" class="avatar" (click)="goToProfile()"/>
+            <h2>User</h2>
+            <p>August 28, 2019</p>
+            <p>My description</p>
+            <hr>
+        </ion-card>
+      
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon"></ion-icon>
           {{p.title}}
         </button>
       </ion-list>
+
+      
     </ion-content>
+    <ion-footer >
+      
+      <div style="text-align: center">
+        <button ion-button fill="clear" menuClose (click)="logout()" color="danger">Logout</button>
+      </div>
+    </ion-footer>
 </ion-menu>
 
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
