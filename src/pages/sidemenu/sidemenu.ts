@@ -4,8 +4,6 @@ import { IonicPage, NavController, NavParams, Nav } from 'ionic-angular';
 export interface PageInterface {
   title: string;
   pageName: string;
-  tabComponent?: any;
-  index?: number;
   icon: string;
 }
 
@@ -22,9 +20,8 @@ export class SidemenuPage {
 
   pages: PageInterface[] = [
     //TODO: Change this array to other sections different from tab pages
-    { title: 'Tab 1', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
-    { title: 'Tab 2', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' },
-    { title: 'Tab 3', pageName: 'TabsPage', tabComponent: 'Tab3Page', index: 2, icon: 'options' },
+    { title: 'Profile', pageName: 'ProfilePage', icon: 'person' },
+    { title: 'Configuration', pageName: 'ConfigPage', icon: 'settings' }
   ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -34,11 +31,10 @@ export class SidemenuPage {
   }
 
   openPage(page: PageInterface) {
-
-  }
-  
-  isActive(page: PageInterface) {
-
+    this.navCtrl.push(page.pageName);
   }
 
+  goToProfile() {
+    this.navCtrl.push('ProfilePage');
+  }
 }
