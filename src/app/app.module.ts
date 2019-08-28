@@ -11,6 +11,7 @@ import { ListPage } from '../pages/list/list';
 import { NewsPage } from '../pages/news/news';
 //import { RegisterPage } from '../pages/register/register';
 import { RegisterPageModule } from '../pages/register/register.module';
+import { PostPageModule } from '../pages/post/post.module';
 
 //Services - Provider
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,7 +30,8 @@ import { NewsService } from '../services/news-service';
     HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    RegisterPageModule
+    RegisterPageModule,
+    PostPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
