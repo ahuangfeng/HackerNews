@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth-service';
 })
 export class RegisterPage {
   createOK = false;
-  registerCredentials = { username:'', password:''};
+  registerCredentials = { username:'', password:'', email: ''};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertControl: AlertController, private auth: AuthService) {
     
@@ -21,7 +21,35 @@ export class RegisterPage {
   }
 
   public register() {
+    this.auth.register(this.registerCredentials).subscribe(success => {
+      if(success) {
+        this.createOK = true;
+        this.showPopup("Success", "Account created.");
+      } else {
+        this.showPopup("Error", "Problem creating account.");
+      }
+    },
+      error => {
+        this.showPopup("Error", error);
+      });
+  }
 
+  showPopup(title, text) {
+    let alert = this.alertControl.create({
+      title: title,
+      subTitle: text,
+      buttons: [
+        {
+          text: 'OK',
+          handler: data => {
+            if (this.createOK) {
+              this.navCtrl.popToRoot();
+            }
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
   showError(error) {

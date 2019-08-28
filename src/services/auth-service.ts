@@ -47,4 +47,16 @@ export class AuthService{
             observer.complete();
         });
     }
+
+    public register(credentials) {
+        if(credentials.username === null || credentials.password === null || credentials.email === null) {
+            return Observable.throw("Please complete all the form");
+        }else{
+            //TODO: Store information DB
+            return Observable.create(observer => {
+                observer.next(true);
+                observer.complete();
+            });
+        }
+    }
 }
