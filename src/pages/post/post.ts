@@ -22,4 +22,7 @@ export class PostPage {
     console.log('ionViewDidLoad PostPage');
   }
 
+  post() {
+    this.navCtrl.popToRoot();
+  }
 }
