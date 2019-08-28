@@ -5,5 +5,14 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-card text-center class="hide-card">
+      <img menuClose src="/assets/img/watanabe_mayu.jpg" class="avatar"/>
+      <h2>User</h2>
+      <p>August 28, 2019</p>
+      <p>This is a brief description of the user's profile</p>
+  </ion-card>
 
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="post()"><ion-icon name="arrow-dropleft"></ion-icon></button>
+  </ion-fab>
 </ion-content>
