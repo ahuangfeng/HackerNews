@@ -1,12 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PostPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -24,5 +18,14 @@ export class PostPage {
 
   post() {
     this.navCtrl.popToRoot();
+  }
+
+  
+  @ViewChild('myInput') myInput: ElementRef;
+  resize() {
+    //Decreases textarea size if we delete rows
+    this.myInput.nativeElement.style.height = 'auto';
+    //Increments textarea size if we add rows
+    this.myInput.nativeElement.style.height = this.myInput.nativeElement.scrollHeight + 'px';
   }
 }

@@ -20,17 +20,16 @@
         <ion-label floating>News link</ion-label>
         <ion-input type="text" value=""></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-textarea class="descriptionBox" placeholder="Enter a brief description"></ion-textarea>
-      </ion-item>
-      <ion-item>
-        <ion-buttons start>
+   
 
-          <button ion-button expand="block">Upload Image
-            <ion-icon  slot="start" name="image"></ion-icon>
-          </button>
-        </ion-buttons>
-      </ion-item>
+        <!--<textarea class="descriptionBox" id="descriptionBox" rows="1" maxLength="500" placeholder="Enter a brief description" (keyup)="resize()"></textarea>-->
+        <textarea #myInput id="myInput" rows="1" maxLength="500" (keyup)="resize()" placeholder="Add a brief description of the news"></textarea>
     </ion-list>
   </form>
+  
+  <button ion-button block icon-start>
+    <ion-icon name="images"></ion-icon>
+      Upload Image
+  </button>
+  
 </ion-content>
