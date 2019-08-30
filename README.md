@@ -9,6 +9,7 @@ This project is a resemblance of the famous social news website Hacker News
 > Technologies implied are Ionic & Angular framework alongisde Typescript | HTML | CSS
 
 ## Helpful Websites
+<pre>
 <a href="https://devdactic.com/ionic-side-menu-tabs/">Ionic Sidemenu + Tabs Navigation</a>
 <a href="https://forum.ionicframework.com/t/where-should-i-put-images/41463/6">Where to put images</a>
 <a href="https://demo.mobiscroll.com/angular/alerts-notifications#">> Angular & Ionic Demos</a>
@@ -16,3 +17,6 @@ This project is a resemblance of the famous social news website Hacker News
 
 <a href="https://www.youtube.com/watch?v=dPUmskG_-y0">Splash + Animation</a>
 <a href="https://www.youtube.com/watch?v=_DdqcjmHOHQ">Animation</a>
+<a href="https://github.com/yannbf/ionic3-components">Ionic 3 Components Demo</a>
+<a href="https://forum.ionicframework.com/t/solved-ion-textarea-resize-height-dynamically/80885">Textarea expand & shrink</a>
+</pre>
