@@ -31,6 +31,71 @@
             "post_image" : "/assets/imgs/ioang.png",
             "profile_image" : "/assets/img/watanabe_mayu.jpg",
             "posting_date" : "July 18, 2019"
+    },    
+    {
+            "name" : "Introducing nushell",
+            "id" : "0",
+            "points" : 854,
+            "author" : "bradleybuda",
+            "comments" : 177,
+            "url" : "http://www.jonathanturner.org/2019/08/introducing-nushell.html",
+            "post_image" : "/assets/imgs/ioang.png",
+            "profile_image": "/assets/img/watanabe_mayu.jpg",
+            "posting_date" : "March 26, 2019"
+    },
+    {
+            "name" : "JavaScript: The Modern Parts",
+            "id" : "1",
+            "points" : 15,
+            "author" : "janvdberg",
+            "comments" : 2,
+            "url" : "https://amontalenti.com/2019/08/10/javascript-the-modern-parts",
+            "post_image" : "/assets/imgs/ioang.png",
+            "profile_image" : "/assets/img/watanabe_mayu.jpg",
+            "posting_date" : "May 23, 2019"
+    },
+    {
+            "name" : "Deconstructing Google's excuses on tracking protection",
+            "id" : "2",
+            "points" : 689,
+            "author" : "randomwalker",
+            "comments" : 179,
+            "url" : "https://freedom-to-tinker.com/2019/08/23/deconstructing-googles-excuses-on-tracking-protection/",
+            "post_image" : "/assets/imgs/ioang.png",
+            "profile_image" : "/assets/img/watanabe_mayu.jpg",
+            "posting_date" : "July 18, 2019"
+    },    
+    {
+            "name" : "Introducing nushell",
+            "id" : "0",
+            "points" : 854,
+            "author" : "bradleybuda",
+            "comments" : 177,
+            "url" : "http://www.jonathanturner.org/2019/08/introducing-nushell.html",
+            "post_image" : "/assets/imgs/ioang.png",
+            "profile_image": "/assets/img/watanabe_mayu.jpg",
+            "posting_date" : "March 26, 2019"
+    },
+    {
+            "name" : "JavaScript: The Modern Parts",
+            "id" : "1",
+            "points" : 15,
+            "author" : "janvdberg",
+            "comments" : 2,
+            "url" : "https://amontalenti.com/2019/08/10/javascript-the-modern-parts",
+            "post_image" : "/assets/imgs/ioang.png",
+            "profile_image" : "/assets/img/watanabe_mayu.jpg",
+            "posting_date" : "May 23, 2019"
+    },
+    {
+            "name" : "Deconstructing Google's excuses on tracking protection",
+            "id" : "2",
+            "points" : 689,
+            "author" : "randomwalker",
+            "comments" : 179,
+            "url" : "https://freedom-to-tinker.com/2019/08/23/deconstructing-googles-excuses-on-tracking-protection/",
+            "post_image" : "/assets/imgs/ioang.png",
+            "profile_image" : "/assets/img/watanabe_mayu.jpg",
+            "posting_date" : "July 18, 2019"
     }
-    
 ]
