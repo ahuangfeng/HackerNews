@@ -19,6 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthService } from '../services/auth-service';
 import { NewsService } from '../services/news-service';
 
+import { SocialSharing } from '@ionic-native/social-sharing'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -46,6 +48,7 @@ import { NewsService } from '../services/news-service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     NewsService,
+    SocialSharing
   ]
 })
 export class AppModule {}

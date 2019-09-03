@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the NewsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { SocialSharing } from '@ionic-native/social-sharing'
+
 
 @IonicPage()
 @Component({
@@ -17,7 +13,7 @@ export class NewsPage {
 
   public newsDetails = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public share: SocialSharing) {
     this.newsDetails = this.navParams.get("newsDetails");
   }
 
@@ -25,4 +21,21 @@ export class NewsPage {
     console.log('ionViewDidLoad NewsPage');
   }
 
+  twitterShare(message) {
+    /*this.share.shareViaTwitter(message, null, null).then(() => {
+
+    }, () => {
+      let toast = this.toastCtrl.create({message: "Error"});
+      toast.present();
+    });*/
+  }
+
+  whatsappShare() {
+  
+    this.share.shareViaWhatsApp("hello", "/assets/img/watanabe_mayu.jpg" , null).then(
+     ()=>{ console.log("shareViaWhatsApp: Success");
+    }).catch(() => {
+      console.error("shareViaWhatsApp: Failed")
+    });
+  }
 }
