@@ -8,7 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
-import { NewsPage } from '../pages/news/news';
+import { NewsPageModule } from '../pages/news/news.module';
 //import { RegisterPage } from '../pages/register/register';
 import { RegisterPageModule } from '../pages/register/register.module';
 import { PostPageModule } from '../pages/post/post.module';
@@ -25,22 +25,21 @@ import { SocialSharing } from '@ionic-native/social-sharing'
   declarations: [
     MyApp,
     LoginPage,
-    ListPage,
-    NewsPage
+    ListPage
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     RegisterPageModule,
-    PostPageModule
+    PostPageModule,
+    NewsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
-    ListPage,
-    NewsPage
+    ListPage
   ],
   providers: [
     StatusBar,
