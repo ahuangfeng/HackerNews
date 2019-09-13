@@ -20,3 +20,8 @@ This project is a resemblance of the famous social news website Hacker News
 <a href="https://github.com/yannbf/ionic3-components">Ionic 3 Components Demo</a>
 <a href="https://forum.ionicframework.com/t/solved-ion-textarea-resize-height-dynamically/80885">Textarea expand & shrink</a>
 </pre>
+
+## Running & Deployment
+Clone this repository: https://github.com/MasterofDragons/HackerNews.git
+Run npm install from the project root
+Run ionic serve in a terminal from the project root
